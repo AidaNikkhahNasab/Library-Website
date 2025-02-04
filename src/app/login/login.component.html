@@ -1,0 +1,18 @@
+
+<form #loginForm="ngForm" class="form-signin">
+  <h2 class="form-signin-heading">{{'cSignInText'|translate}}</h2>
+  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="loginService.selectedUser._id">
+  <label for="inputEmail" class="sr-only">{{'cEmail'|translate}}</label>
+     <input name="email" #name="ngModel" [(ngModel)]="loginService.selectedUser.email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+     <label for="inputPassword" class="sr-only">{{'cPassword'|translate}}</label>
+     <input name="password" #name="ngModel" [(ngModel)]="loginService.selectedUser.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+ <button class="btn btn-lg btn-primary btn-block" type="button" (click)="onSubmit(loginForm)">{{'cSignIn'|translate}}</button><br>
+
+ <div class="button-row">
+  {{"cNReg"|translate}}
+  <button mat-raised-button (click)="onRegister()">{{"cRegister"|translate}}</button>
+ </div>
+
+</form>
+

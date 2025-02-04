@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content white-text">
+        <div class="row">
+            <div class="col s5">
+                <form #userInfoForm="ngForm" (ngSubmit)="onSubmit(userInfoForm)">
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="loginService.selectedUser._id">
+                    <div class="row">
+                      <label> {{"cName"|translate}}: 
+                        <label class="red-text">*</label>
+                      </label>
+                         <div class="input-field col s12">
+                            <input type="text" name="fname" #name="ngModel" [(ngModel)]="loginService.selectedUser.fname" placeholder="{{'cNameText'|translate}}" required>                            
+                         </div>
+                    </div>
+                    
+                    <div class="row">
+                      <label> {{"cFamily"|translate}}: 
+                        <label class="red-text">*</label>
+                      </label>
+                      <div class="input-field col s12">
+                         <input type="text" name="lname" #name="ngModel" [(ngModel)]="loginService.selectedUser.lname" placeholder="{{'cFamilyText'|translate}}" required>
+                         
+  
+                      </div>
+                    </div>
+                    <div class="row">
+                      <label> {{"cEmail"|translate}}: 
+                        <label class="red-text">*</label>
+                        </label>
+                       <div class="input-field col s12">
+                          <input type="text" name="email" #name="ngModel" [(ngModel)]="loginService.selectedUser.email" placeholder="{{'cEmailText'|translate}}">
+                          
+                       </div>
+                  </div>
+  
+             <div class="row">
+              <label> {{"cUserName"|translate}}: 
+                <label class="red-text">*</label>
+                </label> 
+              <div class="input-field col s12">
+                 <input type="text" name="username" #name="ngModel" [(ngModel)]="loginService.selectedUser.username" placeholder="{{'cUserText'|translate}}">
+                            
+                </div>
+              <div class="row">
+                <label> {{"cPassword"|translate}}: 
+                  <label class="red-text">*</label>
+                </label>
+                <div class="input-field col s12">
+                   <input type="text" name="password" #name="ngModel" [(ngModel)]="loginService.selectedUser.password" placeholder="{{'cPasswordText'|translate}}">
+                   
+                </div>
+           </div>
+             </div>
+                  <div class="row">
+                    <label> {{"cMobileN"|translate}}:</label>
+                    <div class="input-field col s12">
+                    <input type="text" name="mobilenumber" #name="ngModel" [(ngModel)]="loginService.selectedUser.mobileNumber" placeholder="{{'cMobileText'|translate}}">
+                    </div>  
+                  </div>
+                  <div class="row">
+                    <label> {{"cRole"|translate}}:</label>
+                    <div class="input-field col s12">
+                    <input type="text" name="role" #name="ngModel" [(ngModel)]="loginService.selectedUser.role" placeholder="{{'cRoleText'|translate}}">
+                    </div>  
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                        <button class="btn btn-custom right" type="button" (click)="resetForm(userInfoForm)"> {{"cReset"|translate}}</button>
+                        <button class="btn btn-custom right" type="submit" [disabled]="!userInfoForm.valid">{{"cEdit"|translate}}</button>
+                    </div>
+  
+                  </div>
+                </form>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>{{"cAdminProfile"|translate}}</p>
+      <br>
+      <br>
+      <button class="profileBTN" (click)="showUser = !showUser" mat-raised-button>
+        {{"cUsers"|translate}}
+      </button>
+      <p *ngIf="showUser"><a class="showList" href="#" routerLink="../userI">{{"cUManagement"|translate}}</a></p>
+      <br>
+      <br>
+      <button class="profileBTN" (click)="showBook = !showBook" mat-raised-button>
+        {{"cBooks"|translate}}
+      </button>
+      <p *ngIf="showBook"><a class="showList" href="#" routerLink="../book">{{"cBManagement"|translate}}</a></p>
+    </mat-drawer>
+
+  
+    <div class="example-sidenav-content">
+      <button class="sidenavBtn" type="button" mat-button (click)="drawer.toggle()">
+        {{"cChooseAction"|translate}}
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+  

@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content white-text">
+      <div class="row">
+          <div class="col s5">
+              <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+                  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="bookService.selectedBook._id">
+                  <div class="row">
+                    <label> {{"cTitle"|translate}}:<label class="red-text">*</label></label>
+                       <div class="input-field col s12">
+                          <input type="text" name="title" #name="ngModel" [(ngModel)]="bookService.selectedBook.title" placeholder="Enter full title" required>
+                       </div>
+                  </div>
+                  
+                  <div class="row">
+                    <label> {{"cAuthor"|translate}}: 
+                      <label class="red-text">*</label>
+                    </label>
+                    <div class="input-field col s12">
+                       <input type="text" name="author" #name="ngModel" [(ngModel)]="bookService.selectedBook.author" placeholder="Enter author name" required>
+                      
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label> {{"cYear"|translate}}: 
+                      <label class="red-text">*</label>
+                      </label>
+                     <div class="input-field col s12">
+                        <input type="text" name="year" #name="ngModel" [(ngModel)]="bookService.selectedBook.year" placeholder="Enter year">
+                        
+                     </div>
+                </div>
+
+           <div class="row">
+            <label> ISSN:</label>
+            <div class="input-field col s12">
+               <input type="text" name="issn" #name="ngModel" [(ngModel)]="bookService.selectedBook.issn" placeholder="Enter ISSN">
+
+            </div>
+           </div>
+                <div class="row">
+                  <label> {{"cAbstract"|translate}}:</label>
+                  <div class="input-field col s12">
+                  <input type="text" name="abstract" #name="ngModel" [(ngModel)]="bookService.selectedBook.abstract" placeholder="Enter Abstract">
+                  </div>  
+                </div>
+                <div class="row">
+                  <label> {{"cNBook"|translate}}:</label>
+                  <div class="input-field col s12">
+                  <input type="text" name="numberBook" #name="ngModel" [(ngModel)]="bookService.selectedBook.numberBook" placeholder="Enter Abstract">
+                  </div>  
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                      <button class="btn btn-custom right" type="button" (click)="resetForm(bookForm)"> {{"cReset"|translate}}</button>
+                      <button class="btn btn-custom right" type="submit" [disabled]="!bookForm.valid">{{"cSubmit"|translate}}</button>
+                  </div>
+
+                </div>
+              </form>
+          </div>
+          <br>
+          <br>
+          <div class="col s7">
+              <table class="responsive-table highlight">
+                <thead>
+                  <tr>
+                      <th>{{"cTitle"|translate}}</th>
+                      <th>{{"cAuthor"|translate}}</th>
+                      <th>{{"cYear"|translate}}</th>
+                      <th>ISSN</th>
+                      <th>{{"cAbstract"|translate}}</th>
+                      <th>{{"cNBook"|translate}}</th>
+                      <th></th>
+                  </tr>
+                </thead>
+                <tr *ngFor="let boo of bookService.books">
+                  <td>{{boo.title}}</td>
+                  <td>{{boo.author}}</td>
+                  <td>{{boo.year}}</td>
+                  <td>{{boo.issn}}</td>
+                  <td>{{boo.abstract}}</td>
+                  <td>{{boo.numberBook}}</td>
+                  <td>
+                    <a class="action-btn" (click)="onEdit(boo)">
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <a class="action-btn" (click)="onDelete(boo._id, bookForm)">
+                      <i class="material-icons">delete</i>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>

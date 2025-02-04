@@ -1,0 +1,38 @@
+
+
+
+nav.header-display{
+    background-color: rgb(92, 84, 84);
+    margin-right: 100px;
+    height: 80px;
+    font-size: x-large;
+}
+
+.navbar-brand{
+    font-size: xlarge;
+}
+
+.card{
+    height: 100%;
+    background-color: rgb(158, 163, 167);
+}
+
+div.chat-content {
+    border-radius: .25rem;
+    height: 20rem;
+   
+}
+
+.container .col-2{
+    background-color:aliceblue;
+    width: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: .25rem;
+
+}
+
+.container .col-8{
+    border-radius: .25rem;
+    background-color:aliceblue;
+}

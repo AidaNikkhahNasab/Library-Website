@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "63b1eee64b178cdab6029438"
+  },
+  "fname": "yashar",
+  "lname": "Sebastian",
+  "username": "yaSepa",
+  "email": "yashar.sebastian@gmail.com",
+  "password": "jfhg47865",
+  "mobileNumber": 18946456,
+  "role": "regular",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672605414757"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672605414757"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63bf35601561942e352b654a"
+  },
+  "fname": "Arwin",
+  "lname": "Jaschwa",
+  "username": "arvin32",
+  "email": "a.jaschwa@gmail.com",
+  "password": "nkscd89d98",
+  "role": "regular",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1673475424924"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1673481158393"
+    }
+  },
+  "__v": 0,
+  "mobileNumber": 154333
+},{
+  "_id": {
+    "$oid": "63bf415c4e67ff0f49f30361"
+  },
+  "fname": "Ali",
+  "lname": "Adams",
+  "username": "aliadam",
+  "email": "ali.adams@gmail.com",
+  "password": "kdjf868h",
+  "mobileNumber": 9878675,
+  "role": "regular",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1673478492125"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1673529924911"
+    }
+  },
+  "__v": 0
+}]

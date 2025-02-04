@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "63aff8a194f1c18f41be9340"
+  },
+  "fname": "yasaman",
+  "lname": "rashida",
+  "email": "s.y.rashida@gmail.com",
+  "password": "866dfds",
+  "role": "manager",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672476833147"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672476833147"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63aff8d594f1c18f41be9343"
+  },
+  "fname": "john",
+  "lname": "karl",
+  "email": "kj.Karl@gmail.com",
+  "password": "9837nvkhf",
+  "role": "manager",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1672476885675"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672476885675"
+    }
+  },
+  "__v": 0
+}]

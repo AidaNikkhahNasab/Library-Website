@@ -1,0 +1,38 @@
+.example-container {
+    width: 600px;
+    height: 620px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(44, 50, 50);
+    font-family: 'Saira', sans-serif !important;
+
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+
+  .profileBTN{
+    background-color: rgb(35, 33, 33);
+    color:azure;
+    width: 225px;
+    height: 30px;
+  }
+  .showList{
+    font-size: medium;
+    color: black;
+  }
+
+  .sidenavBtn{
+    font-size: large;
+    color: bisque;
+    background-color: black;
+    width: 200px;
+    height: 100px;
+  }

@@ -1,0 +1,36 @@
+
+<html>
+<link href='https://fonts.googleapis.com/css?family=Saira Semi Condensed' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <!-- Toolbar -->
+ <mat-toolbar class="matToolbarSCC">
+  <mat-toolbar-row>
+    <div class="logobox"><a href=""><img src="/assets/img/THD-Logo.png" height="50"></a></div>
+    <span class="spacer"></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div>
+      <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <a class="SpaceItems" href="#" mat-button routerLink="/search" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"><i class="fa fa-fw fa-search" ></i> {{'cSearch'|translate}}</a>
+      <a *ngIf="deviceXs" class="SpaceItems" href="#" mat-button routerLink="/login" routerLinkActive="active-link"><i class="fa fa-fw fa-envelope" ></i> {{'cULogin'|translate}}</a>
+      <a *ngIf="deviceXs" class="SpaceItems" href="#" mat-button routerLink="/admin" routerLinkActive="active-link"><i class="fa fa-fw fa-envelope" ></i> {{'cALogin'|translate}}</a>
+      <a *ngIf="deviceXs" class="SpaceItems" href="#" mat-button routerLink="/chat" routerLinkActive="active-link">{{'cChat'|translate}}</a>
+      <a *ngIf="deviceXs" class="SpaceItems" href="#" mat-button routerLink="/contact" routerLinkActive="active-link"><i class="fa fa-fw fa-envelope" ></i> {{'cContact'|translate}}</a>
+    </div>
+    <span class="spacer"></span>
+     <app-select-language></app-select-language>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="!deviceXs" fxLayoutAlign="space-between end">
+    <a class="SpaceItems" href="#" mat-button routerLink="/login" routerLinkActive="active-link"><i class="fa fa-fw fa-envelope" ></i> {{'cULogin'|translate}}</a>
+    <a class="SpaceItems" href="#" mat-button routerLink="/admin" routerLinkActive="active-link"><i class="fa fa-fw fa-envelope" ></i> {{'cALogin'|translate}}</a>
+    <a class="SpaceItems" href="#" mat-button routerLink="/chat" routerLinkActive="active-link">{{'cChat'|translate}}</a>
+    <a class="SpaceItems" href="#" mat-button routerLink="/contact" routerLinkActive="active-link"><i class="fa fa-fw fa-envelope" ></i> {{'cContact'|translate}}</a>  
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<body>
+ <router-outlet></router-outlet> 
+</body>
+</html>

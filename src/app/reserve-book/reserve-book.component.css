@@ -1,0 +1,85 @@
+.select-display{
+    font-size: 0.75em;
+    opacity: 0.5;
+    width: 200px;
+    height: 75px;
+}
+
+.table-display{
+        border: 1px solid black;
+        padding: 10px;
+}
+
+.resultBox{
+    margin-top: 20px;
+    width: 650px;
+    color: black;
+}
+
+.font-display{
+    color: rgb(27, 27, 29);
+    opacity: 0.75;
+    align-content: center;
+}
+
+.card-content{
+    width: 700px;
+    height: 350px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 450px;
+}
+
+.input-display{
+    font-size: 0.75em;
+    opacity: 0.5;
+    size: 100px;
+    
+}
+.material-icons {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  
+
+.BTNN {
+  background-color: #29282c;
+  font-family: 'Saira';
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.result{
+    background-color: rgb(80, 80, 82);
+}
+
+.example-user-input {
+    margin-right: 8px;
+  }

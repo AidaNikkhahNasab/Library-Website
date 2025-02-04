@@ -1,0 +1,62 @@
+.select-display{
+    font-size: 0.75em;
+    opacity: 0.5;
+    width: 200px;
+    height: 75px;
+}
+
+.table-display{
+    font-family: 'Saira';
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.resultBox{
+    font-family: 'Saira';
+    margin-top: 20px;
+    width: 650px;
+}
+
+.font-display{
+    font-family: 'Saira';
+    color: rgb(15, 15, 17);
+    opacity: 0.75;
+    align-content: center;
+}
+
+.card-content{
+    font-family: 'Saira';
+
+    width: 700px;
+    height: 350px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 450px;
+}
+
+.input-display{
+    font-size: 0.75em;
+    opacity: 0.5;
+    size: 100px;
+    
+}
+
+.BTNN {
+  font-family: 'Saira';
+  background-color: #332a54;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.result{
+    background-color: rgb(114, 114, 116);
+    color:black;
+}

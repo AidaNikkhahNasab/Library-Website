@@ -1,0 +1,62 @@
+<mat-card class="card-content">
+    <h4 class="font-display">{{"cSearchParam"|translate}}</h4>
+    <br>
+    <mat-form-field class="select-display" appearance="fill">
+      <mat-label>{{"cOption"|translate}}</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option value="author">{{"cAuthorN"|translate}}</mat-option>
+        <mat-option value="title">{{"cTitleB"|translate}}</mat-option>
+        <mat-option value="issn">ISSN</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <form #registerForm="ngForm" (ngSubmit)="onSearchBook(selected, registerForm.value.SearchParameter)">  
+      <label for="fname">{{"cFavorite"|translate}} {{selected}}</label><br>
+      <input type="text" class="input-display" #name="ngModel" [(ngModel)]="bookService.selectedParameter" id="fname" name="SearchParameter" ><br>
+      <div class="row">
+        <div class="input-field col s12">
+            <button class="BTNN right" mat-raised-button color="primary" type="submit">{{"cSearch"|translate}}</button>
+        </div>
+      </div>
+
+      </form>
+  
+      <div class="resultBox col s7">
+        <table class="result responsive-table highlight table-display">
+          <thead>
+            <tr>
+                <th>{{"cTitle"|translate}}</th>
+                <th>{{"cAuthor"|translate}}</th>
+                <th>{{"cYear"|translate}}</th>
+                <th>ISSN</th>
+                <th>{{"cAbstract"|translate}}</th>
+                <th>{{"cNBook"|translate}}</th>
+                <th></th>
+            </tr>
+          </thead>
+          <tr *ngFor="let boo of books">
+            <td>{{boo.title}}</td>
+            <td>{{boo.author}}</td>
+            <td>{{boo.year}}</td>
+            <td>{{boo.issn}}</td>
+            <td>{{boo.abstract}}</td>
+            <td>{{boo.numberBook}}</td>
+            <td>
+              <a class="action-btn" (click)="onReserve(boo)">
+                <i class="material-icons">add_card</i>
+              </a>
+            </td>
+            <td>
+              <a class="action-btn" (click)="onReturn(boo)">
+                <i class="material-icons">remove_circle_outline</i>
+              </a>
+            </td>
+            <td>
+                <a class="action-btn"  (click)="onComplete(boo, registerForm)">
+                  <i class="material-icons">done</i>
+                </a>
+              </td>
+          </tr>
+        </table>
+    </div>
+  </mat-card>

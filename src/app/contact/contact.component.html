@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content white-text">
+      <div class="row">
+          <div class="col s5">
+                    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                      <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="contactService.selectedContact._id">
+                      <div class="row">
+                        <label> {{"cEmail"|translate}} : 
+                          <label class="red-text">*</label>
+                        </label>
+                           <div class="input-field col s12">
+                              <input type="text" name="email" #name="ngModel" [(ngModel)]="contactService.selectedContact.email" placeholder="{{'cEmailText'|translate}}" required>                         
+                           </div>
+                      </div>
+                      
+                      <div class="row">
+                        <label> {{"cSubject"|translate}} : 
+                          <label class="red-text">*</label>
+                        </label>
+                        <div class="input-field col s12">
+                           <input type="text" name="subject" #name="ngModel" [(ngModel)]="contactService.selectedContact.subject" placeholder="{{'cSubjectText'|translate}}" required>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label> {{"cComment"|translate}} : 
+                          <label class="red-text">*</label>
+                          </label>
+                         <div class="input-field col s12">
+                            <input type="text" name="comment" #name="ngModel" [(ngModel)]="contactService.selectedContact.comment" placeholder="{{'cMessageText'|translate}}">
+                            
+                         </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                          <button class="btn btn-custom right" type="button" (click)="resetForm(contactForm)"> {{"cReset"|translate}}</button>
+                          <button class="btn btn-custom right" type="submit" [disabled]="!contactForm.valid">{{"cSend"|translate}}</button>
+                      </div>
+                    </div>
+                    </form> 
+                  
+          </div>
+          <div class="col-lg-4 bg-image">
+                      <div>
+                        <h5 class="font-weight-light mb-3">{{"cAddress"|translate}}</h5>
+                        <p>{{"cAddressText"|translate}}</p><br>
+                        <h5 class="font-weight-light">{{"cCallUs"|translate}}</h5>
+                        <div class="op-7 round-social" style="font-size:15px;">
+                          <div style="padding: 15px 0px;">
+                            <span>{{"cTel"|translate}} : 049-9825125282</span>
+                            <a href="tel:9825125282" class="text-decoration-none border border-white rounded-circle" target="_blank"> <i class="fas fa-phone-volume"></i></a>
+                          </div>
+                          <div style="padding: 15px 0px;">
+                            <span>{{"cFax"|translate}}:   049-8469108864</span>
+                            <a href="tel:8469108864" class="text-decoration-none text-white border border-white rounded-circle" target="_blank"> <i class="fas fa-phone-volume"></i></a>
+                          </div>
+                        </div>
+                        <div class="round-social light">
+                          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=s.y.rashida@gmail.com" class="ml-0 text-decoration-none text-white border border-white rounded-circle" target="_blank"><i class="fa fa-envelope"></i></a>
+                          <a href="https://www.youtube.com/watch?v=72_5_YuDCNA&list=LL&index=9&t=730s" class="text-decoration-none text-white border border-white rounded-circle" target="_blank"><i class="fa fa-youtube"></i></a>
+                        </div>
+                      </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Admin Message Modal -->
+  <div class="modal fade" id="showAdminreply" tabindex="-1" role="dialog" aria-labelledby="showAdminreply" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(187 188 189);">
+          <h3 class="modal-title m-0" id="showAdminreply">Admin Reply</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="messagebd">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- history Modal -->
+  <div class="modal fade" id="history" tabindex="-1" role="dialog" aria-labelledby="history" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(187 188 189);">
+          <h3 class="modal-title m-0" id="history">{{"cHistory"|translate}}</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="bd">
+
+        </div>
+      </div>
+    </div>
+  </div>

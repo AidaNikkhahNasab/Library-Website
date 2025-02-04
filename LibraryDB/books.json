@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "63aeca085b9df42059115dd9"
+  },
+  "title": "Mr. Benjamin",
+  "author": "john",
+  "year": 1899,
+  "issn": "8775674",
+  "abstract": "Book for childern",
+  "__v": 0,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1672955026003"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63aecbefa4d34dd345114468"
+  },
+  "title": "Sherlok Holmes",
+  "author": "Arthor Canon Doyl",
+  "year": 1820,
+  "issn": "897456",
+  "abstract": "Book for Adult",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63b09af5857de0829c9caa4d"
+  },
+  "title": "Harry Pater",
+  "author": "Merry",
+  "year": 1898,
+  "issn": "75363",
+  "abstract": "Book for kids",
+  "__v": 0,
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1673476039613"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63bf3c174e67ff0f49f3034b"
+  },
+  "title": "Menschen A1.1",
+  "author": "Heuber",
+  "year": 2020,
+  "issn": "385602837",
+  "abstract": "Book for Deautch learner",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1673477143933"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1673477172084"
+    }
+  },
+  "__v": 0
+}]

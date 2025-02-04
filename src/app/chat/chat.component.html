@@ -1,0 +1,35 @@
+<header>
+    <nav class="header-display navbar navbar-app navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">{{'cChatText'|translate}}</a>
+      </nav>
+</header>
+<main class="chat">
+    <div class="container">
+        <div class="chat-content">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let chatMessage of webSocketService.chatMessages">
+                        <strong>{{chatMessage.user}} : </strong>
+                        <span> {{chatMessage.message}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+        <form (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">
+            <div class="row">
+                <div class="col-2">
+                    <input type="text" class="form-control" name="user" id="input-user" placeholder="{{'cfName'|translate}}" ngModel>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" name="message" id="input-message" placeholder="{{'cMessage'|translate}}" ngModel>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary"> {{'cSend'|translate}} </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    </div>
+</main>

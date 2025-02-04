@@ -1,0 +1,321 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>library-angular documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">library-angular documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<p>Seyedeh Yasaman, Rashida, 22201201</p>
+<p>Aida, Nikkhah Nasab, 22208964</p>
+<p>MITWS2223</p>
+<p>Library website for university  ------&gt;  is called LibraryTHD</p>
+<p>Git Repositoy:  <a href="https://mygit.th-deg.de/sr24201/librarythd">https://mygit.th-deg.de/sr24201/librarythd</a></p>
+<h1 id="projectdescription">ProjectDescription</h1>
+<p>This project is about designing a website/app for Library of a university. This website has several facilities for guests and members. In the following, we list some of which:</p>
+<ul>
+<li>searching books by guests and members.</li>
+<li>logging in the Library app by its members and staffs.</li>
+<li>registering in the Library by guests in order to become as a member.</li>
+<li>reserving a book and return it to the library.</li>
+<li>upgrading the membership to one of three states (Gold, Silver, Regular) by library&#39;s members to use special options of Library.</li>
+<li>degrading a member&#39;s membership by staffs because of some problem that happens by the member.</li>
+<li>contacting with staffs to inform the occured events or problems by members or guests.</li>
+<li>sending comments and opinion about books, media , and other facilities of library by members.</li>
+<li>inserting the information of new book in the Database by staffs.</li>
+<li>updating the information of a book in the Database by staffs.</li>
+<li>deleting the information of a book in the Database by staffs.</li>
+<li>editing user&#39;s detail by administrator</li>
+<li>delete user access to the app by adminstrator</li>
+<li>creating chat room for members and guests.</li>
+<li>changing language (English and German).</li>
+</ul>
+<p>Our database collections are located in the LibraryDB folder.</p>
+<h1 id="installation">Installation</h1>
+<p>Microsoft VS code for implementation of project is used
+This is an Angular project created using Angular cli. Install Angular cli (one time) if you do not have it installed .
+For install CLI, should run the following command</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install -g @angular/cli</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Then, you should install project dependencies:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>Backend (MongoDB) : 
+In order to run backend, should install Mongoose. For install Mongoose, you should run the following command</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install mongoose</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Then, to load that configuration into your application, you ’ll need some packages. Install them by executing the following npm command in your terminal:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install express express-session @types/express @types/cors ts-node</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>In Node.js, you need to restart the process to make changes take effect. You can eliminate this extra step by using nodemon to restart the process automatically. You can install nodemon globally with npm:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install nodemon --global</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>Websocket 
+ws is a simple to use, blazing fast, and thoroughly tested WebSocket client and server implementation. We used websocket service to create chat room.<br>For install websocket, you should go to the directory in which websocket server is located. Then, run the foolowing command</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install ws</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>Documentation
+We used Compodoc for documantation. To install Compodoc, you need to run the following command</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>npm install -g @compodoc/compodoc</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h1 id="basic-usage">Basic Usage</h1>
+<ul>
+<li>First step, to run the site on localhost, you should go to the app folder and then run the following command</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">  ng serve</code></pre></div><p>By default the site will load in browser at <a href="http://localhost:4200/">http://localhost:4200/</a></p>
+<ul>
+<li>Second step, you should run our backend. All Collections are found in LibraryDB folder in our project. You just should import them to a database, called Library, in the mongoDb. Then, you can open another terminal and go to the server-side directory by running the following command:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">  cd server-side </code></pre></div><p>After that, you should run nodmon. </p>
+<ul>
+<li>Third step, you should run Web Socket. Open new terminal and then run the following commands one by one:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">  cd server-side 
+  cd src
+  ts-node webSCK.ts</code></pre></div><ul>
+<li>At the end, if you want to see our Documentation, just you should run the following command:</li>
+</ul>
+<div><pre class="line-numbers"><code class="language-none">  compodoc -p tsconfig.json -s -w</code></pre></div><ul>
+<li>To test our Library app, you can use:<ul>
+<li>the following username and password for User login:<ul>
+<li>Email:  <a href="mailto:&#x61;&#105;&#x64;&#x61;&#x2e;&#x6e;&#x69;&#x6b;&#107;&#104;&#x61;&#104;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x61;&#105;&#x64;&#x61;&#x2e;&#x6e;&#x69;&#x6b;&#107;&#104;&#x61;&#104;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></li>
+<li>Password: schdkb7i6</li>
+</ul>
+</li>
+<li>the following username and password for administrator login:<ul>
+<li>Email:  <a href="mailto:&#115;&#x2e;&#x79;&#46;&#x72;&#97;&#115;&#x68;&#105;&#x64;&#x61;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#115;&#x2e;&#x79;&#46;&#x72;&#97;&#115;&#x68;&#105;&#x64;&#x61;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;</a></li>
+<li>Password:  866dfds</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Responsive design:</p>
+<p> <img src="./src/assets/img/basic%20usage/responsive.jpg" alt="alt text" class="img-responsive"></p>
+<p>main page:
+ <img src="./src/assets/img/basic%20usage/first.jpg" alt="alt text" class="img-responsive"></p>
+<p>User Login page :
+ <img src="./src/assets/img/basic%20usage/user-login.jpg" alt="alt text" class="img-responsive"></p>
+<p>User Profile:
+ <img src="./src/assets/img/basic%20usage/user-profile.jpg" alt="alt text" class="img-responsive"></p>
+<p>Admin Login page:</p>
+<p><img src="./src/assets/img/basic%20usage/admin-login.jpg" alt="alt text" class="img-responsive"></p>
+<p>admin Profile page :
+ <img src="./src/assets/img/basic%20usage/admin-profile.jpg" alt="alt text" class="img-responsive"></p>
+<p>Chat page:
+<img src="./src/assets/img/basic%20usage/chat.jpg" alt="alt text" class="img-responsive"></p>
+<p>Contact page:
+<img src="./src/assets/img/basic%20usage/contact.jpg" alt="alt text" class="img-responsive"></p>
+<p>Edit, Delete or Add a book :
+<img src="./src/assets/img/basic%20usage/book-management.jpg" alt="alt text" class="img-responsive"></p>
+<p>search book:
+<img src="./src/assets/img/basic%20usage/search.jpg" alt="alt text" class="img-responsive"></p>
+<p>Register user:
+<img src="./src/assets/img/basic%20usage/register.jpg" alt="alt text" class="img-responsive"></p>
+<p>Edit, Delete or add a user by administrator:
+<img src="./src/assets/img/basic%20usage/users-management.jpg" alt="alt text" class="img-responsive"></p>
+<p>Reserve Book by users:
+ <img src="./src/assets/img/basic%20usage/reserve-book.jpg" alt="alt text" class="img-responsive"></p>
+<h1 id="implementation-of-the-requests">Implementation of the Requests</h1>
+<ul>
+<li>User Login pannel include requests to login to the app by members</li>
+<li>Admin pannel in order to request to login to the app by administrators</li>
+<li>Events include Adding, deleting, Updating Books in the library</li>
+<li>Reservation pannel to reserve book and also return the borrowed book by users</li>
+<li>Admin profile pannel is used by administrators to access to other users and also they have ability to edit users information, delete any user or even register a user. Admins also can request to add, delete, update book details.</li>
+<li>User Profile pannel shows user information and ability to change their own info. Moreover, search, borrow and return books by users.</li>
+<li>Chatroom pannel is used to send text messages to all defined users. Also, users and guests can have chat with support team by this pannel to explain their issue and take advise by support team.
+(- app.component.ts is used to handle all incomming requests and redirect them to the coresponding route. we also import all diffrent routs we defined for diffrent requests, create connection to database, and import express in this file<ul>
+<li>routes Modules : which include event.ts, user.ts files.
+each of these files are responsible to handle specific requests. we did this separation in order to have a well organized structure.)</li>
+</ul>
+</li>
+<li>Search Book pannel to search a special book by users in the database</li>
+</ul>
+<h1 id="work-done">Work done</h1>
+<ul>
+<li><p>Seyedeh Yasaman Rashida :</p>
+<ul>
+<li>Backend </li>
+<li>Websocket for creating chat room.</li>
+<li>search book </li>
+<li>reserve and return book by members</li>
+<li>add, edit, delete book by administartor</li>
+<li>add, edit, delete users by administartor</li>
+<li>contact users and guests with administrator</li>
+<li>Compodoc documentation</li>
+<li>sending email ( users and guests can send email to the main administrator of library and say about their issues)</li>
+<li>usecase diagram (Online Registeration, Book Reservation, Change Membership, Send Comment)</li>
+<li>writting Stakeholders, [Stakeholders and Requests], [Request Requirement] and Log_in in WiKi</li>
+<li>Saira font</li>
+<li>corporate identity of THD</li>
+<li>Responsive design</li>
+</ul>
+</li>
+<li><p>Aida Nikkhah Nasab :</p>
+<ul>
+<li>Persona (Guest-Member-Admin-Manager)</li>
+<li>user login</li>
+<li>admin login</li>
+<li>user registeration</li>
+<li>internationalization</li>
+<li>usecase diagram  (Search books- Report problems- Request Features)</li>
+<li>writing README</li>
+<li>writting Stakeholders, [Stakeholders and Requests] and [Request Requirement] in WiKi</li>
+</ul>
+</li>
+</ul>
+<h2 id="technologies">Technologies</h2>
+<ul>
+<li>Angular + typscript + HTML+ CSS + Responsive design + WebSocket  client for frontend.</li>
+<li>NodeJS + MongoDB + Websocket server for backend </li>
+<li>we use POSTMON and Thunder client to test our backend.</li>
+<li>we installed MongoDB locally.</li>
+</ul>
+<p>----------------------------------------------------------The End-------------------------------------------------------------------</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
