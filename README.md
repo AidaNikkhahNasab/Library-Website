@@ -1,6 +1,3 @@
-Seyedeh Yasaman, Rashida
-
-
 Library website for university  ------>  is called LibraryTHD
 
 
@@ -157,7 +154,6 @@ Reserve Book by users:
 - Search Book pannel to search a special book by users in the database
 
 # Work done
-- Seyedeh Yasaman Rashida :
     - Backend 
     - Websocket for creating chat room.
     - search book 
